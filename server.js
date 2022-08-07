@@ -7,7 +7,7 @@ const weatherData = require("./data/weather.json");
 const axios = require("axios");
 
 // require the needed modules
-const {handleWeather} = require("./modules/weather");
+const { handleWeather } = require("./modules/weather");
 const handleMovies = require("./modules/movies");
 
 const PORT = process.env.PORT || 8080;
@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
   res.send("Home Server!");
 });
 // end point to weather API
-app.get("/weather", handleWeather);// req,res pass by defualt
+app.get("/weather", handleWeather); // req,res pass by defualt
 // end point to movies API
 app.get("/movies", handleMovies);
 
